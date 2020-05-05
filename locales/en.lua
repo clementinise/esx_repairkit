@@ -1,12 +1,13 @@
 Locales ['en'] = {
 	['used_kit']					= 'you used ~y~x1 ~b~Repairkit',
 	['must_be_outside']				= 'you must be outside of the vehicle!',
-	['no_vehicle_nearby']			= 'there is no ~r~vehicle ~w~nearby',
+	['no_vehicle_nearby']				= 'there is no ~r~vehicle ~w~nearby',
 	['finished_repair']				= '~g~you repaired the vehicle!',
-	['finished_tyre_repair']		= '~g~you changed the tyre of the vehicle',
+	['finished_repair_body']			= '~g~you repaired the vehicles body!']
+	['finished_tyre_repair']			= '~g~you changed the tyre of the vehicle',
 	['abort_hint']					= 'press ~INPUT_VEH_DUCK~ to cancel',
 	['aborted_repair']				= 'you ~r~aborted ~w~the repairs',
-	['aborted_tyre_repair']			= 'you ~r~aborted ~w~the tyre repairs',
+	['aborted_tyre_repair']				= 'you ~r~aborted ~w~the tyre repairs',
 	['car_exploding']				= 'the engine is going to explode ...',
 	['not_near_tyre']				= 'You\'re not in front of a ~r~tyre',
 	['not_near_engine']				= 'You\'re not next the ~r~engine',
@@ -14,4 +15,5 @@ Locales ['en'] = {
 	['ReparingEngine']				= 'Engine repairing...',
 	['ReparingTyre']				= 'Tyre replacement...',
 	['Cancelling']					= 'Cancelling ...',
+	['body_health']					= 'your body doesn\'t need to be repaired',
 }
