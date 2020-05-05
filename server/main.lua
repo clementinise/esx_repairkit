@@ -51,6 +51,19 @@ ESX.RegisterUsableItem('tyrekit', function(source)
 	end
 end)
 
+ESX.RegisterUsableItem('bodykit', function(source)
+	local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+		
+	if Config.AllowMecano then
+		TriggerClientEvent('bodykit:onUse', _source)
+	else
+		if xPlayer.job.name ~= 'mechanic' then
+			TriggerClientEvent('bodykit:onUse', _source)
+		end
+	end
+end)
+
 RegisterNetEvent('esx_repairkit:removeTyreKit')
 AddEventHandler('esx_repairkit:removeTyreKit', function()
 	local _source = source
@@ -70,6 +83,17 @@ AddEventHandler('esx_repairkit:removeKit', function()
 	if not Config.InfiniteRepairs then
 		xPlayer.removeInventoryItem('repairkit', 1)
 		TriggerClientEvent(_U('used_kit'))
+	end
+end)
+
+RegisterNetEvent('esx_repairkit:removeBodyKit')
+AddEventHandler('esx_repairkit:removeBodyKit', function()
+	local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+
+	if not Config.InfiniteRepairsTyreKit then
+		xPlayer.removeInventoryItem('bodykit', 1)
+		TriggerClientEvent(_U('used_bodykit'))
 	end
 end)
 
