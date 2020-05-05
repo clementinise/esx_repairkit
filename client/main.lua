@@ -254,3 +254,54 @@ AddEventHandler('tyrekit:onUse', function()
 	end)
 end
 end)
+
+RegisterNetEvent('bodykit:onUse')
+AddEventHandler('bodykit:onUse', function()
+	local playerPed 		= PlayerPedId()
+	local coords 			= GetEntityCoords(playerPed)
+	local closestVehicle 	= GetClosestVehicle(vehicle)
+
+	if IsAnyVehicleNearPoint(coords.x, coords.y, coords.z, 3.0) then
+		local vehicle = nil
+	else
+		ESX.Notification(_U('no_vehicle_nearby'))
+	end
+
+	if IsPedInAnyVehicle(playerPed, false) then
+		vehicle = GetVehiclePedIsIn(playerPed, false)
+	else
+		vehicle = GetClosestVehicle(coords.x, coords.y, coords.z, 3.0, 0, 71)
+	end
+
+	if DoesEntityExist(vehicle) and IsVehicleSeatFree(vehicle, -1) and IsPedOnFoot(playerPed) then
+		local body = GetVehicleBodyHealth(vehicle)
+		if body < 1000 then
+			TaskStartScenarioInPlace(playerPed, 'PROP_HUMAN_BUM_BIN', 0, true)
+
+			Citizen.CreateThread(function()
+				ThreadID3 = GetIdOfThisThread()
+				CurrentAction = 'repair'
+				isReparing = not isReparing
+				SetTextComponentFormat('STRING')
+				AddTextComponentString(_U('abort_hint'))
+				DisplayHelpTextFromStringLabel(0, 0, 1, -1)
+				Citizen.Wait(Config.BodyKitTime * 1000)
+
+				if CurrentAction ~= nil then
+					ClearPedTasksImmediately(playerPed)
+					SetVehicleBodyHealth(vehicle, 1000)
+					SetVehicleFixed(vehicle)
+					ESX.ShowNotification(_U('finished_repair_body'))
+					if isReparing == true then
+						isReparing = not isReparing
+					end
+
+					CurrentAction = nil
+					TerminateThisThread()
+				end
+			end)
+		else
+			ESX.ShowNotification(_U('body_health'))
+		end
+	end
+end)
