@@ -1,4 +1,6 @@
-resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
+fx_version 'adamant'
+
+game 'gta5'
 
 description 'ESX Repairkit'
 version '2.0'
@@ -6,6 +8,7 @@ version '2.0'
 client_scripts {
 	'@es_extended/locale.lua',
 	'client/main.lua',
+	'locales/tr.lua',
 	'locales/fr.lua',
 	'locales/en.lua',
 	'locales/sv.lua',
@@ -15,6 +18,7 @@ client_scripts {
 server_scripts {
 	'@es_extended/locale.lua',
 	'server/main.lua',
+	'locales/tr.lua',
 	'locales/fr.lua',
 	'locales/en.lua',
 	'locales/sv.lua',
