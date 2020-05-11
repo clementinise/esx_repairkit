@@ -12,4 +12,4 @@ Config.ExplosionOnFailedRepair		= true		-- Set to true if you wan't to use "Conf
 Config.ExplosionChance				= 100		-- The lower it is, the more it has a chance to make the engine fail and the car explode. (1 = 100%, 2 = 50%, 4 = 25%, 10 = 10%, 100 = 1%, etc)
 Config.EnableProgressBar			= true		-- If you don't want a progress bar when your player use the item or you don't want to use the resource "progressBars" then set it to false
 
-Config.Locale						= 'fr'
+Config.Locale						= 'tr'
