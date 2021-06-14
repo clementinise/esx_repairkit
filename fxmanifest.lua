@@ -8,17 +8,13 @@ version '3.1'
 client_scripts {
 	'@es_extended/locale.lua',
 	'client/main.lua',
-	'locales/fr.lua',
-	'locales/en.lua',
-	'locales/sv.lua',
+	'locales/*.lua',
 	'config.lua'
 }
 
 server_scripts {
 	'@es_extended/locale.lua',
 	'server/main.lua',
-	'locales/fr.lua',
-	'locales/en.lua',
-	'locales/sv.lua',
+	'locales/*.lua',
 	'config.lua'
 }
