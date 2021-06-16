@@ -18,7 +18,7 @@ PerformHttpRequest('https://raw.githubusercontent.com/X00LA/esx_repairkit/master
 		else
 			print('## Outdated')
 			print('## Please check the GitHub and download the last update')
-			print('## https://github.com/clementinise/esx_repairkit/releases/latest')
+			print('## https://github.com/X00LA/esx_repairkit/releases/latest')
 			print('########################')
 		end
 		print('\n')
