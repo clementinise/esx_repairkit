@@ -2,9 +2,9 @@ ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 -- Update Checker
-local CurrentVersion = '3.1' -- Do Not Change This Value
+local CurrentVersion = '3.5' -- Do Not Change This Value
 
-PerformHttpRequest('https://raw.githubusercontent.com/clementinise/esx_repairkit/master/version', function(Error, NewestVersion, Header)
+PerformHttpRequest('https://raw.githubusercontent.com/X00LA/esx_repairkit/master/version', function(Error, NewestVersion, Header)
 		print('\n')
 		print('########################')
 		print('## RepairKit Resource')
