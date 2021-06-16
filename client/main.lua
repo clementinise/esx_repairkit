@@ -104,12 +104,20 @@ AddEventHandler('esx_repairkit:onUse', function()
 					ClearPedTasksImmediately(playerPed)
 					TriggerServerEvent('esx_repairkit:removeKit')
 				if Config.RealisticVehicleFailure then
-						SetVehicleEngineHealth(vehicle, 700.0)
-						SetVehiclePetrolTankHealth(vehicle, 700.0)
-					else
-						SetVehicleEngineHealth(vehicle, 1000.0) 
-						SetVehiclePetrolTankHealth(vehicle, 1000.0)
-					end
+				    SetVehicleUndriveable(vehicle,false)
+				    SetVehicleFixed(vehicle)
+				    healthBodyLast=1000.0
+				    healthEngineLast=1000.0
+				    healthPetrolTankLast=1000.0
+				    SetVehicleEngineOn(vehicle, true, false )
+				else
+				    SetVehicleUndriveable(vehicle,false)
+				    SetVehicleFixed(vehicle)
+				    healthBodyLast=1000.0
+				    healthEngineLast=1000.0
+				    healthPetrolTankLast=1000.0
+				    SetVehicleEngineOn(vehicle, true, false )
+				end
 				if isReparing then
 					isReparing = not isReparing
 				end
