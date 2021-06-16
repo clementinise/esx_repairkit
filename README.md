@@ -1,10 +1,10 @@
 # esx_repairkit [![Release](https://img.shields.io/badge/Release-V%203.5-blue)](https://github.com/X00LA/esx_repairkit/releases/latest)
 
-RepairKit script for FiveM ESX servers - https://forum.cfx.re/t/fork-esx-esx-repairkit-repairkit-item-for-car/1133523
-
-Original Author: https://github.com/jonteohr/esx_repairkit
-Forked from: https://github.com/clementinise/esx_repairkit
-
+RepairKit script for FiveM ESX servers - https://forum.cfx.re/t/fork-esx-esx-repairkit-repairkit-item-for-car/1133523  
+  
+Original Author: https://github.com/jonteohr/esx_repairkit  
+Forked from: https://github.com/clementinise/esx_repairkit  
+  
 ## FEATURES
 * Repair Kit Item & Tyre Kit Item
 * Update Checker on resource start
