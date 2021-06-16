@@ -60,10 +60,9 @@ AddEventHandler('esx_repairkit:onUse', function()
 	local coords		= GetEntityCoords(playerPed)
 	local coordsE = GetWorldPositionOfEntityBone(vehicle, engine)
 
-	if IsAnyVehicleNearPoint(coords.x, coords.y, coords.z, 5.0) and GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()), coordsE, true) >= 2.0 then
+	if IsAnyVehicleNearPoint(coords.x, coords.y, coords.z, 5.0) then
 		local vehicle = nil
-			ESX.ShowNotification(_U('not_near_engine'))
-		elseif not IsAnyVehicleNearPoint(coords.x, coords.y, coords.z, 5.0) then
+		if not IsAnyVehicleNearPoint(coords.x, coords.y, coords.z, 5.0) then
 			ESX.ShowNotification(_U('no_vehicle_nearby'))
 		elseif GetVehicleEngineHealth(vehicle) == 0 then
 			ESX.ShowNotification(_U('car_dead'))
