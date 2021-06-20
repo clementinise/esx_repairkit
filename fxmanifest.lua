@@ -3,7 +3,7 @@ games { 'gta5' }
 
 author 'jonteohr'
 description 'ESX Repairkit'
-version '3.5'
+version '3.6'
 
 client_scripts {
 	'@es_extended/locale.lua',
