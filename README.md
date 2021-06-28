@@ -1,15 +1,18 @@
-# esx_repairkit [![Release](https://img.shields.io/badge/Release-V%203.1-blue)](https://github.com/clementinise/esx_repairkit/releases/latest)
+# esx_repairkit [![Release](https://img.shields.io/badge/Release-V%203.5-blue)](https://github.com/X00LA/esx_repairkit/releases/latest)
 
-RepairKit script for FiveM ESX servers - https://forum.cfx.re/t/fork-esx-esx-repairkit-repairkit-item-for-car/1133523
-
+RepairKit script for FiveM ESX servers - https://forum.cfx.re/t/fork-esx-esx-repairkit-repairkit-item-for-car/1133523  
+  
+Original Author: https://github.com/jonteohr/esx_repairkit  
+Forked from: https://github.com/clementinise/esx_repairkit  
+  
 ## FEATURES
 * Repair Kit Item & Tyre Kit Item
 * Update Checker on resource start
-* More realistic since it needs you to be next to the engine or near the tyre to actually repair
-* It does not repair the visual aspect of the car, only the engine
+* More realistic since it needs you to be ~~next to the engine~~ or near the tyre to actually repair
+* ~~It does not repair the visual aspect of the car, only the engine~~ (Bugged at the moment)
 * Player can abort the repair by pressing "X"
-* Message if players attempt to repair the car and are not in front of the tyre or engine
-* French, English, Swedish language included
+* Message if players attempt to repair the car and are not in front of the tyre ~~or engine~~
+* French, English, Swedish and german language included
 ## RepairKit & TyreKit easily configurable: 
 * **Config.InfiniteRepairs & Config.InfiniteRepairsTyreKit** 
 Toggle Infinite RepairKit & TyreKit (One Kit last forever)
@@ -30,7 +33,8 @@ The lower it is, the more it has a chance to make the engine fail and the car ex
 If you don't want a progress bar when your player use the item or you don't want to use any dependencies ([progressBar](https://forum.cfx.re/t/release-progress-bars-1-0-standalone/526287)) then set it to **false**
 
 
-Some new features will be added soon:  t̶i̶r̶e̶ ̶k̶i̶t̶,̶ ̶%̶ ̶f̶a̶i̶l̶u̶r̶e̶,  can't be used again after X times, change key for cancelling the repair in config file, etc
+~~Some new features will be added soon:  t̶i̶r̶e̶ ̶k̶i̶t̶,̶ ̶%̶ ̶f̶a̶i̶l̶u̶r̶e̶,  can't be used again after X times, change key for cancelling the repair in config file, etc~~
+Since I'm renamed the TyreKit to Spre Wheel this feature will not come in my fork.
 
 **KNOWN BUG :** 
 * If **"Config.IfMecaIsOnline"** is set to true then **"Config.AllowMecano"** won't work
@@ -44,10 +48,10 @@ Some new features will be added soon:  t̶i̶r̶e̶ ̶k̶i̶t̶,̶ ̶%̶ ̶f̶a�
 (Don't forget to rename this resource "progressBar" or it will not work)
 
 ### Installation
-Download the [latest release](https://github.com/clementinise/esx_repairkit/releases/latest) and rename the folder to esx_repairkit.
+Download the [latest release](https://github.com/X00LA/esx_repairkit/releases/latest) and rename the folder to esx_repairkit.
 
-Import `esx_repairkit.sql` to your database
+Import `esx_repairkit.sql` to your database (Take a look into the localization folders for more langauges)
 Drag the folder into your `<server-data>/resources/[esx]` folder and add this to your server.cfg
 ```
-start esx_repairkit
+ensure esx_repairkit
 ```

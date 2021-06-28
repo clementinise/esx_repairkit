@@ -1,22 +1,20 @@
-resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
+fx_version 'cerulean'
+games { 'gta5' }
 
+author 'jonteohr'
 description 'ESX Repairkit'
-version '2.0'
+version '3.6'
 
 client_scripts {
 	'@es_extended/locale.lua',
 	'client/main.lua',
-	'locales/fr.lua',
-	'locales/en.lua',
-	'locales/sv.lua',
+	'locales/*.lua',
 	'config.lua'
 }
 
 server_scripts {
 	'@es_extended/locale.lua',
 	'server/main.lua',
-	'locales/fr.lua',
-	'locales/en.lua',
-	'locales/sv.lua',
+	'locales/*.lua',
 	'config.lua'
 }
